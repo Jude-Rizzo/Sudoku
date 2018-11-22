@@ -38,7 +38,110 @@ public class WolfEric{
 }
 
   private boolean checkBox(int n){
+    ArrayList<Double> nums = new ArrayList<Double>(Arrays.asList(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0));
+    if(n == 0){
+      for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+    if(n == 1){
+      for(int i = 0; i < 3; i++){
+        for(int j = 3; j < 6; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+    if(n == 2){
+      for(int i = 0; i < 3; i++){
+        for(int j = 6; j < 9; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+    if(n == 3){
+      for(int i = 3; i < 6; i++){
+        for(int j = 0; j < 3; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+
+    if(n == 4){
+      for(int i = 3; i < 6; i++){
+        for(int j = 3; j < 6; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+
+    if(n == 5){
+      for(int i = 3; i < 6; i++){
+        for(int j = 6; j < 9; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+    if(n == 6){
+      for(int i = 6; i < 9; i++){
+        for(int j = 0; j < 3; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+    if(n == 7){
+      for(int i = 6; i < 9; i++){
+        for(int j = 3; j < 6; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
+    if(n == 8){
+      for(int i = 6; i < 9; i++){
+        for(int j = 6; j < 9; j++){
+          try{
+            nums.remove(wolfDaniel[i][j] * 1.0);
+          } catch(Exception e) {
+            return false;
+          }
+        }
+      }
+    }
     return true;
+
   }
 
 

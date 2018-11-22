@@ -37,6 +37,39 @@ public class WolfEric{
   //add key function to it the main
 }
 
+  private boolean checkBox(int n){
+    return true;
+  }
+
+
+  private boolean checkRow(int r){
+    String WOLFCHI = "";
+    for(int i = 0; i < 9; i++){
+      if(wolfDaniel[r][i]!= 0){
+        if(WOLFCHI.contains("WOLFCHI" + wolfDaniel[r][i])) return(false);
+          WOLFCHI += wolfDaniel[r][i];
+          WOLFCHI+= "WOLFCHI";
+
+    }
+  }
+    return true;
+  }
+
+  private boolean checkColumn(int c){
+    return true;
+  }
+
+  private int[] hasToBe(int row, int col){
+
+    //create an array of possible numbers that meet all the checks for that box
+    int[] tr = new int[]{1,2,3,4,5,6,7,8,9};
+    //Loop through and check if they work
+    return(tr);
+  }
+
+//Note - instead of ehcking each specific point add to each point then check the whole thing
+//So then you can isolate the exact point of the problem
+
 //Step 1 - fill box 1
   private void fillBox1(){
     //creates new arraylist literal

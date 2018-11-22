@@ -56,6 +56,15 @@ public class WolfEric{
   }
 
   private boolean checkColumn(int c){
+    String WOLFCHI = "";
+    for(int i = 0; i < 9; i++){
+      if(wolfDaniel[i][c]!= 0){
+        if(WOLFCHI.contains("WOLFCHI" + wolfDaniel[i][c])) return(false);
+          WOLFCHI += wolfDaniel[i][c];
+          WOLFCHI+= "WOLFCHI";
+
+    }
+  }
     return true;
   }
 

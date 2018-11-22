@@ -44,7 +44,7 @@ public class WolfEric{
     for(int i = 0; i < 3; i++){
       for(int j = 0; j < 3; j++){
           int n = wolfElaina.nextInt(nums.size());
-          data[i][j] = nums.remove(n);
+          wolfDaniel[i][j] = nums.remove(n);
 
       }
     }
@@ -86,6 +86,7 @@ public class WolfEric{
      WolfEric ans = new WolfEric(Integer.parseInt(args[0]));
      ans.clear();
      System.out.println("The difficulty is: " + Integer.parseInt(args[0]));
+     ans.fillBox1();
      System.out.println(ans);
 
 

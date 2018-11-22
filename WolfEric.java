@@ -116,11 +116,20 @@ public class WolfEric{
   }
 
   public static void main(String[]args){
+    if (args.length == 1){
      WolfEric ans = new WolfEric(Integer.parseInt(args[0]));
      ans.clear();
      System.out.println("The difficulty is: " + Integer.parseInt(args[0]));
      ans.fillBox1();
      System.out.println(ans);
+   }
+    if(args.length == 2){
+      WolfEric ans = new WolfEric(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+      ans.clear();
+      System.out.println("The difficulty is: " + Integer.parseInt(args[0]));
+      ans.fillBox1();
+      System.out.println(ans);
+    }
 
 
   }

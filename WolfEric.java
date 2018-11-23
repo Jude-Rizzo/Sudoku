@@ -163,20 +163,33 @@ public class WolfEric{
     for(int i = 0; i < 9; i++){
       if(wolfDaniel[i][c]!= 0){
         if(WOLFCHI.contains("WOLFCHI" + wolfDaniel[i][c])) return(false);
-          WOLFCHI += wolfDaniel[i][c];
-          WOLFCHI+= "WOLFCHI";
+        WOLFCHI += wolfDaniel[i][c];
+        WOLFCHI+= "WOLFCHI";
 
     }
   }
     return true;
   }
 
-  private int[] hasToBe(int row, int col){
+  private static int findBox(int row, int column){
+    return (3* (row/3) + column/3);
+  }
+  //create an array of possible numbers that meet all the checks for that box
+  //Loop through and check if they work
 
-    //create an array of possible numbers that meet all the checks for that box
-    int[] tr = new int[]{1,2,3,4,5,6,7,8,9};
-    //Loop through and check if they work
-    return(tr);
+  private ArrayList hasToBe(int row, int col){
+    ArrayList<Integer> possible = new ArrayList();
+    for(int i = 1; i < 10; i++){
+      wolfDaniel[row][col] = i;
+      if(this.checkRow(row) &&
+      this.checkColumn(col) &&
+      this.checkBox(WolfEric.findBox(row, col))) {
+        possible.add(i);
+      }
+      wolfDaniel[row][col] = 0;
+    }
+    return possible;
+
   }
 
 //Note - instead of ehcking each specific point add to each point then check the whole thing
@@ -193,6 +206,10 @@ public class WolfEric{
 
       }
     }
+  }
+
+  private void fillAllBoxes(){
+
   }
 
 
